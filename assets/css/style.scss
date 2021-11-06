@@ -1,0 +1,53 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.masonry-section{
+    .container{
+        max-width: 100%;
+        column-count: 4;
+        column-gap: 30px;
+        padding: 30px;
+
+        @media (max-width: 1025px) {
+            column-count: 3;
+            column-gap: 25px;
+            padding: 25px;
+        }
+
+        @media (max-width: 769px) {
+            column-count: 2;
+            column-gap: 20px;
+            padding: 20px;
+        }
+
+        @media (max-width: 512px) {
+            column-gap: 10px;
+            padding: 10px;
+        }
+    }
+
+    figure{
+        margin: 0 0 30px;
+        display: grid;
+        break-inside: avoid;
+
+        @media (max-width: 1025px) {
+            margin: 0 0 25px;
+        }
+
+        @media (max-width: 769px) {
+            margin: 0 0 20px;
+        }
+
+        @media (max-width: 512px) {
+            margin: 0 0 10px;
+        }
+        img{
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+}
